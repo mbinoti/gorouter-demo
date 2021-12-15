@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:navpage/page1.dart';
+import 'package:navpage/view/page1.dart';
 import 'package:navpage/page2.dart';
 
 void main() {
