@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:navpage/page2.dart';
+import 'package:navpage/widgets/custom_button_widget.dart';
 
 class Page1 extends StatelessWidget {
   const Page1({Key? key}) : super(key: key);
@@ -8,13 +9,11 @@ class Page1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const Page2()),
-            );
-          },
-          child: const Text('ir pagina 1'),
+        child: CustomButtonWidget(
+          onPressed: () {},
+          title: 'Button',
+          disable: false,
+          titleSize: 18,
         ),
       ),
     );

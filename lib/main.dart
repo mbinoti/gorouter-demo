@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:navpage/page1.dart';
+import 'package:navpage/page2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +13,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const Page1(),
-    );
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        initialRoute: '/',
+        routes: {
+          '/': (_) => const Page1(),
+          '/page2': (_) => Page2(),
+        });
   }
 }
