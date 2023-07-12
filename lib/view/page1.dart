@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:navpage/controllers/posts_controllers.dart';
 
-import 'package:navpage/page2.dart';
+import 'package:navpage/view/page2.dart';
 import 'package:navpage/widgets/custom_button_widget.dart';
 
 class Page1 extends StatefulWidget {
@@ -25,7 +25,7 @@ class _Page1State extends State<Page1> {
                 animation:
                     Listenable.merge([_controller.posts, _controller.inLoader]),
                 builder: (_, __) => _controller.inLoader.value
-                    ? CircularProgressIndicator()
+                    ? const CircularProgressIndicator()
                     : ListView.builder(
                         physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
